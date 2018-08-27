@@ -28,3 +28,29 @@ $background-opacity: 0.9;
     }
   }
 }
+
+// Media query mixins
+// For small devices like mobile phones
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+// For medium devices like tablets and small laptops
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+// For large devices like laptops and PC
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+// For Extra large devices like TV, projectors
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
